@@ -40,6 +40,33 @@ namespace Presupuesto {
         protected global::System.Web.UI.WebControls.Label presupuestoLabel;
         
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
+        /// nuevoPresuTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox nuevoPresuTextBox;
+        
+        /// <summary>
+        /// editarButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button editarButton;
+        
+        /// <summary>
         /// UsuarioImage control.
         /// </summary>
         /// <remarks>
