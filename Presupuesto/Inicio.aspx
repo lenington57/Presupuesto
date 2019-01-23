@@ -12,7 +12,7 @@
         <br>
     </div>
     <asp:Label ID="Label2" runat="server" Text="Digite la cantidad de su nuevo Presupuesto" Font-Bold="True" Font-Size="Large"></asp:Label>
-    <asp:TextBox class="form-control col-md-2" ID="nuevoPresuTextBox" runat="server"></asp:TextBox>
+    <asp:TextBox class="form-control col-md-2" ID="nuevoPresuTextBox" runat="server" ></asp:TextBox>
     <asp:Button class="form-control btn btn-dark col-md-2" ID="editarButton" runat="server" Text="Editar Presupuesto" OnClick="editarButton_Click1" />
     <asp:Image ID="UsuarioImage" runat="server" Height="394px" ImageUrl="~/Resources/presupuesto-semanal-o-mensual-cuál-es-mejor.jpg" runat="server" Width="432px" AlternateText="Imagen no disponible" ImageAlign="right" />
     <br>

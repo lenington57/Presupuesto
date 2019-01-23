@@ -45,9 +45,19 @@ namespace Presupuesto
 
         protected void editarButton_Click1(object sender, EventArgs e)
         {
-            int Id = id;
-            int MontoPre = ToInt(nuevoPresuTextBox.Text);
-            UsuarioBLL.ModificarPresupuesto(Id, MontoPre);
+            //bool HayErrores = false;
+            if (String.IsNullOrWhiteSpace(nuevoPresuTextBox.Text))
+            {
+                Response.Write("<script>alert('Ingrese una Cantidad');</script>");               
+            }
+            else
+            {
+                int Id = id;
+                int MontoPre = ToInt(nuevoPresuTextBox.Text);
+                UsuarioBLL.ModificarPresupuesto(Id, MontoPre);
+                nuevoPresuTextBox.Text = "";
+                presupuestoLabel.Text = MontoPre.ToString();
+            }
         }
     }
 }
