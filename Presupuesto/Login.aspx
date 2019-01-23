@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
             <nav class="navbar navbar-dark bg-dark">
-                <a class="navbar-brand" style="font-size: xx-large; border-color: #FFFFFF; color: #FFFFFF;">Iniciar Sesión o Registrarse</a>
+                <a class="navbar-brand" style="font-size: xx-large; border-color: #FFFFFF; color: #FFFFFF;">Iniciar Sesión</a>
                 <div class="form-group col-md-3">
                     <asp:Label ID="Label1" runat="server" Text="Email" ForeColor="White">Email</asp:Label>
                     <asp:TextBox ID="CriterioTextBox" AutoCompleteType="Disabled" class="form-control input-group" runat="server"></asp:TextBox>
