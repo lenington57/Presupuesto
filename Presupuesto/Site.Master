@@ -28,9 +28,8 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/Registros/UsuarioWF.aspx">Usuarios</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="/Registros/CategoriaWF.aspx">Categorías</a>
+                                <a class="dropdown-item" href="/Registros/EgresoWF.aspx">Egresos</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -38,9 +37,8 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/Consultas/CUsuarioWF.aspx">Usuarios</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Categorías</a>
+                                <a class="dropdown-item" href="#">Egresos</a>
                             </div>
                         </li>
                         <li class="nav-item active">

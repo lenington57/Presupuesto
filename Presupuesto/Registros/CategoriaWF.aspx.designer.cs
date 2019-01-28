@@ -10,7 +10,7 @@
 namespace Presupuesto.Registros {
     
     
-    public partial class UsuarioWF {
+    public partial class CategoriaWF {
         
         /// <summary>
         /// Label3 control.
@@ -40,13 +40,13 @@ namespace Presupuesto.Registros {
         protected global::System.Web.UI.WebControls.TextBox usuarioIdTextBox;
         
         /// <summary>
-        /// UsuarioImage control.
+        /// CategoriasImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image UsuarioImage;
+        protected global::System.Web.UI.WebControls.Image CategoriasImage;
         
         /// <summary>
         /// Label10 control.
@@ -76,85 +76,31 @@ namespace Presupuesto.Registros {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// nombreTextBox control.
+        /// descripcionTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombreTextBox;
+        protected global::System.Web.UI.WebControls.TextBox descripcionTextBox;
         
         /// <summary>
-        /// Label6 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// emailTextBox control.
+        /// montoMensualTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox emailTextBox;
-        
-        /// <summary>
-        /// Label7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
-        
-        /// <summary>
-        /// passwordTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox passwordTextBox;
-        
-        /// <summary>
-        /// Label8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
-        
-        /// <summary>
-        /// cpasswordTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cpasswordTextBox;
-        
-        /// <summary>
-        /// Label5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
-        
-        /// <summary>
-        /// presupuestoTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox presupuestoTextBox;
+        protected global::System.Web.UI.WebControls.TextBox montoMensualTextBox;
         
         /// <summary>
         /// nuevoButton control.
@@ -166,21 +112,21 @@ namespace Presupuesto.Registros {
         protected global::System.Web.UI.WebControls.Button nuevoButton;
         
         /// <summary>
-        /// guardarButton control.
+        /// guadarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button guardarButton;
+        protected global::System.Web.UI.WebControls.Button guadarButton;
         
         /// <summary>
-        /// eliminarutton control.
+        /// eliminarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button eliminarutton;
+        protected global::System.Web.UI.WebControls.Button eliminarButton;
     }
 }

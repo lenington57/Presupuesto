@@ -12,6 +12,8 @@ namespace Entities
         [Key]
         public int UsuarioId { get; set; }
 
+        public DateTime Fecha { get; set; }
+
         public string Nombres { get; set; }
 
         public string Email { get; set; }
@@ -26,6 +28,7 @@ namespace Entities
         public Usuario()
         {
             UsuarioId = 0;
+            Fecha = DateTime.Now;
             Nombres = string.Empty;
             Email = string.Empty;
             Password = string.Empty;
@@ -33,9 +36,10 @@ namespace Entities
             MontoPresupuesto = 0;
         }
 
-        public Usuario(int usuarioId, string nombres, string email, string password, string cpassword, int montopresupuesto)
+        public Usuario(int usuarioId, DateTime fecha, string nombres, string email, string password, string cpassword, int montopresupuesto)
         {
             UsuarioId = usuarioId;
+            Fecha = fecha;
             Nombres = nombres;
             Email = email;
             Password = password;
