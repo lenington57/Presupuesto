@@ -170,6 +170,7 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Utilitarios\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

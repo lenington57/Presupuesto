@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entities;
+using Presupuesto.Utilitarios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,17 +14,19 @@ namespace Presupuesto.Registros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            presupuestoTextBox.Text = "0";
         }
 
         private void Limpiar()
         {
-            usuarioIdTextBox.Text = " ";
+            usuarioIdTextBox.Text = "0";
+            fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
             nombreTextBox.Text = " ";
             emailTextBox.Text = "";
             passwordTextBox.Text = "";
             cpasswordTextBox.Text = "";
-            presupuestoTextBox.Text = "";
+            presupuestoTextBox.Text = "0";
         }
 
         private Usuario LlenaClase()
@@ -31,6 +34,7 @@ namespace Presupuesto.Registros
             Usuario usuario = new Usuario();
 
             usuario.UsuarioId = ToInt(usuarioIdTextBox.Text);
+            usuario.Fecha = Convert.ToDateTime(fechaTextBox.Text).Date;
             usuario.Nombres = nombreTextBox.Text;
             usuario.Email = emailTextBox.Text;
             usuario.Password = passwordTextBox.Text;
@@ -72,6 +76,7 @@ namespace Presupuesto.Registros
             if (usuario != null)
             {
                 nombreTextBox.Text = usuario.Nombres;
+                fechaTextBox.Text = usuario.Fecha.ToString();
                 emailTextBox.Text = usuario.Email;
                 passwordTextBox.Text = usuario.Password;
                 cpasswordTextBox.Text = usuario.CPassword;
@@ -79,8 +84,7 @@ namespace Presupuesto.Registros
             }
             else
             {
-                Response.Write("<script>alert('Usuario no encontrado');</script>");
-
+                Utils.MostrarMensaje(this, "No Hay Resultado", "Error", "error");
             }
         }
 
@@ -110,10 +114,12 @@ namespace Presupuesto.Registros
                 }
                 else
                 {
+                    Usuario user = new Usuario();
                     int id = ToInt(usuarioIdTextBox.Text);
-                    usuario = repositorio.Buscar(id);
+                    BLL.Repositorio<Usuario> repository = new BLL.Repositorio<Usuario>();
+                    usuario = repository.Buscar(id);
 
-                    if (usuario != null)
+                    if (user != null)
                     {
                         paso = repositorio.Modificar(LlenaClase());
                         Response.Write("<script>alert('Modificado');</script>");

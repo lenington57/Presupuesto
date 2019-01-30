@@ -21,8 +21,8 @@
                             <div class="container">
                                 <div class="form-group">
                                     <asp:Label ID="Label3" runat="server" Text="CategoriaId"></asp:Label>
-                                    <asp:Button class="btn btn-info btn-sm" ID="BuscarButton" runat="server" Text="Buscar" />
-                                    <asp:TextBox class="form-control" ID="usuarioIdTextBox" Text="0" runat="server"></asp:TextBox>
+                                    <asp:Button class="btn btn-info btn-sm" ID="BuscarButton" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
+                                    <asp:TextBox class="form-control" ID="categoriaIdTextBox" Text="0" runat="server"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -57,9 +57,9 @@
                         <div class="panel-footer">
                             <div class="text-center">
                                 <div class="form-group" style="display: inline-block">
-                                    <asp:Button Text="Nuevo" class="btn btn-primary btn-sm" runat="server" ID="nuevoButton" />
-                                    <asp:Button Text="Guardar" class="btn btn-success btn-sm" runat="server" ID="guadarButton" />
-                                    <asp:Button Text="Eliminar" class="btn btn-danger btn-sm" runat="server" ID="eliminarButton" />
+                                    <asp:Button Text="Nuevo" class="btn btn-primary btn-sm" runat="server" ID="nuevoButton" OnClick="nuevoButton_Click" />
+                                    <asp:Button Text="Guardar" class="btn btn-success btn-sm" runat="server" ID="guadarButton" OnClick="guadarButton_Click" />
+                                    <asp:Button Text="Eliminar" class="btn btn-danger btn-sm" runat="server" ID="eliminarButton" OnClick="eliminarButton_Click" />
                                 </div>
                             </div>
                         </div>
@@ -71,6 +71,5 @@
             <br>
     </div>
 </div>
-    </div>
     </div>
 </asp:Content>
