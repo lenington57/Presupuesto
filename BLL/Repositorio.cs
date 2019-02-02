@@ -21,7 +21,7 @@ namespace BLL
         /// </summary>
         /// <param name="entity">Una instancia de la entidad a guardar</param>
         /// <returns>Retorna True si guardo o Falso si falló </returns>
-        public bool Guardar(T entity)
+        public virtual bool Guardar(T entity)
         {
             bool paso = false;
 
@@ -68,7 +68,7 @@ namespace BLL
         /// </summary>
         ///<param name="id">El Id de la entidad que se desea eliminar </param>
         /// <returns>Retorna True si Eliminó o Falso si falló </returns>
-        public bool Eliminar(int id)
+        public virtual bool Eliminar(int id)
         {
             bool paso = false;
             try
@@ -110,7 +110,7 @@ namespace BLL
         /// </summary> 
         ///<param name="expression">Expression Lambda conteniendo los filtros de busqueda </param>
         ///// <returns>Retorna una lista de entidades</returns>
-        public List<T> GetList(Expression<Func<T, bool>> expression)
+        public virtual List<T> GetList(Expression<Func<T, bool>> expression)
         {
             List<T> Lista = new List<T>();
             try

@@ -19,7 +19,7 @@
                                 </div>
                             </div>
                         </div>
-                        <asp:Image ID="UsuarioImage" runat="server" Height="285px" ImageUrl="~/Resources/icono-nuevo-usuario-png-4.png" runat="server" Width="272px" AlternateText="Imagen no disponible" ImageAlign="right" />
+                        <asp:Image ID="UsuarioImage" runat="server" Height="285px" ImageUrl="~/Resources/icono-nuevo-usuario-png-4.png" runat="server" Width="211px" AlternateText="Imagen no disponible" ImageAlign="right" />
                         <div class="col-md-6 col-md-offset-3">
                             <div class="container">
                                 <div class="form-group">
@@ -84,4 +84,5 @@
             <!-- card.// -->
     </div>
     <br>
+    </div>
 </asp:Content>

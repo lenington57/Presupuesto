@@ -51,12 +51,12 @@ namespace Presupuesto.Registros
             bool paso = false;
             if (String.IsNullOrEmpty(descripcionTextBox.Text))
             {
-                Response.Write("<script>alert('Ingrese una Descripción');</script>");
+                Utils.ShowToastr(this, "Ingrese una Descipción", "Error", "error");
                 paso = true;
             }
             if (String.IsNullOrWhiteSpace(montoMensualTextBox.Text))
             {
-                Response.Write("<script>alert('Ingrese un Monto');</script>");
+                Utils.ShowToastr(this, "Ingrese un Monto", "Error", "error");
                 paso = true;
             }
             
@@ -100,7 +100,7 @@ namespace Presupuesto.Registros
                 if (categoria.CategoriaId == 0)
                 {
                     paso = repositorio.Guardar(categoria);
-                    Response.Write("<script>alert('Guardado');</script>");
+                    Utils.ShowToastr(this, "Guardado", "Correcto", "success");
                     Limpiar();
                 }
                 else
@@ -113,10 +113,10 @@ namespace Presupuesto.Registros
                     if (category != null)
                     {
                         paso = repository.Modificar(LlenaClase());
-                        Response.Write("<script>alert('Modificado');</script>");
+                        Utils.ShowToastr(this, "Modificado", "Correcto", "success");
                     }
                     else
-                        Response.Write("<script>alert('Id no existe');</script>");
+                        Utils.ShowToastr(this, "Id no existe", "Error", "error");
                 }
 
                 if (paso)
@@ -124,7 +124,7 @@ namespace Presupuesto.Registros
                     Limpiar();
                 }
                 else
-                    Response.Write("<script>alert('No se pudo guardar');</script>");
+                    Utils.ShowToastr(this, "No se pudo guardar", "Error", "error");
             }
         }
 
@@ -139,14 +139,14 @@ namespace Presupuesto.Registros
             {
                 if (repositorio.Eliminar(id))
                 {
-                    Response.Write("<script>alert('Eliminado');</script>");
+                    Utils.ShowToastr(this, "Eliminado", "Correcto", "success");
                     Limpiar();
                 }
                 else
-                    Response.Write("<script>alert('No se pudo eliminar');</script>");
+                    Utils.ShowToastr(this, "No se pudo eliminar", "Error", "error");
             }
             else
-                Response.Write("<script>alert('No existe');</script>");
+                Utils.ShowToastr(this, "No existe", "Error", "error");
         }
 
     }

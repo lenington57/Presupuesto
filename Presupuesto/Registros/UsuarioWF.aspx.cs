@@ -84,7 +84,7 @@ namespace Presupuesto.Registros
             }
             else
             {
-                Utils.MostrarMensaje(this, "No Hay Resultado", "Error", "error");
+                Message.ShowToast(this, "success", "Success", "No encontrado");
             }
         }
 

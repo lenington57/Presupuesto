@@ -11,6 +11,59 @@ namespace BLL
 {
     public class RepositorioEgresos : Repositorio<Egreso>
     {
+        public override bool Guardar(Egreso egreso)
+        {
+            bool paso = false;
+            Contexto contexto = new Contexto();
+            try
+            {
+                if (contexto.Egreso.Add(egreso) != null)
+
+                    foreach (var item in egreso.Detalle)
+                    {
+                        contexto.Categoria.Find(item.CategoriaId).MontoMensualidad -= item.MontoEgresado;
+                    }
+
+                //contexto.Vehiculos.Find(mantenimiento.VehiculoId).TotalMantenimiento += mantenimiento.Total;
+
+                contexto.SaveChanges();
+                paso = true;
+
+                contexto.Dispose();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return paso;
+        }
+
+        public override bool Eliminar(int id)
+        {
+            bool paso = false;
+            Contexto contexto = new Contexto();
+            try
+            {
+                Egreso egreso = contexto.Egreso.Find(id);
+
+                foreach (var item in egreso.Detalle)
+                {
+                    var Eliminar = contexto.Categoria.Find(item.CategoriaId);
+                    Eliminar.MontoMensualidad += item.MontoEgresado;
+                }
+                if (contexto.SaveChanges() > 0)
+                {
+                    paso = true;
+                }
+                contexto.Dispose();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return paso;
+        }
+
         public override Egreso Buscar(int id)
         {
             Egreso egreso = new Egreso();

@@ -40,8 +40,6 @@
                                 <div class="form-group">
                                     <asp:Label ID="Label7" runat="server" class="text-success" Text="Categoría"></asp:Label>
                                     <asp:DropDownList class="form-control" ID="categoriaDropDownList" runat="server">
-                                        <asp:ListItem>Comida</asp:ListItem>
-                                        <asp:ListItem>Renta</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
                             </div>
@@ -59,18 +57,26 @@
                             <div class="container">
                                 <div class="form-group">
                                     <asp:Label ID="Label2" runat="server" Text="Monto"></asp:Label>
-                                    <asp:TextBox class="form-control" ID="montoTextBox" Text="0" runat="server"></asp:TextBox>
-                                    <asp:Button class="btn btn-warning btn-sm" ID="agregarButton" runat="server" Text="Agregar" OnClick="agregarButton_Click" />
+                                    <asp:TextBox class="form-control" ID="montoTextBox" Text="0" runat="server"></asp:TextBox>     
                                 </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="text-center">
+                                <div class="form-group" style="display: inline-block">
+                                    <asp:Button class="btn btn-warning btn-sm" ID="agregarButton" runat="server" Text="Agregar" OnClick="agregarButton_Click" />
+                                    <asp:Button class="btn btn-danger btn-sm" ID="remoerButton" runat="server" Text="Remover" OnClick="remoerButton_Click" />
+                                    </div>
                             </div>
                         </div>
                         <asp:GridView ID="egresoGridView" runat="server" class="table table-condensed table-bordered table-responsive" AutoGenerateColumns="False" CellPadding="4" ForeColor="#0066FF" GridLines="None">
                             <AlternatingRowStyle BackColor="#999999" />
                             <Columns>
                                 <asp:BoundField DataField="Id" HeaderText="Id" />
-                                <asp:BoundField DataField="CategoriaId" HeaderText="Categoria" />
-                                <asp:BoundField DataField="Concepto" HeaderText="Nombre" />
-                                <asp:BoundField DataField="Monto" HeaderText="UserName" />
+                                <asp:BoundField DataField="EgresoId" HeaderText="EgresoId" />
+                                <asp:BoundField DataField="CategoriaId" HeaderText="CategoriaId" />
+                                <asp:BoundField DataField="Concepto" HeaderText="Concepto" />
+                                <asp:BoundField DataField="MontoEgresado" HeaderText="Monto Egresado" />
                             </Columns>
                             <HeaderStyle BackColor="#003366" Font-Bold="True" />
                         </asp:GridView>
@@ -99,16 +105,6 @@
                 </article>
             </div>
             <!-- card.// -->
-            <br>
     </div>
-    </div>
-    </div>
-    </div>
-    </div>
-</div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
+    <br>
 </asp:Content>

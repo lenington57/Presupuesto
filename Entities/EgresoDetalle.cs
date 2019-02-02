@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
+    [Serializable]
     public class EgresoDetalle
     {
         [Key]
