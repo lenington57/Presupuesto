@@ -21,7 +21,7 @@
             <asp:TextBox ID="CriterioTextBox" AutoCompleteType="Disabled" class="form-control input-group" runat="server"></asp:TextBox>
         </div>
         <div class="col-lg-1 p-0">
-            <asp:LinkButton ID="buscarLinkButton" CssClass="btn btn-outline-success mt-4" runat="server">
+            <asp:LinkButton ID="buscarLinkButton" CssClass="btn btn-outline-success mt-4" runat="server" OnClick="buscarLinkButton_Click">
                 <span class="fas fa-search"></span>
                  Buscar
             </asp:LinkButton>
@@ -50,5 +50,15 @@
             </Columns>
             <HeaderStyle BackColor="003366" Font-Bold="True" />
         </asp:GridView>
+    </div>
+    <div class="card-footer">
+        <div class="justify-content-start">
+            <div class="form-group" style="display: inline-block">
+                <asp:LinkButton ID="ImprimirLinkButton" CssClass="btn btn-info mt-4" runat="server" OnClick="ImprimirLinkButton_Click">
+                            <span class="fas fa-print"></span>
+                            Imprimir
+                </asp:LinkButton>
+            </div>
+        </div>
     </div>
 </asp:Content>

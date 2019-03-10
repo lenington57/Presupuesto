@@ -67,12 +67,21 @@ namespace Presupuesto.Consultas {
         protected global::System.Web.UI.WebControls.TextBox HastaTextBox;
         
         /// <summary>
-        /// egresoGridView control.
+        /// usuarioGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView egresoGridView;
+        protected global::System.Web.UI.WebControls.GridView usuarioGridView;
+        
+        /// <summary>
+        /// ImprimirLinkButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton ImprimirLinkButton;
     }
 }

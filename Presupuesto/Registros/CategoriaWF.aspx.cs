@@ -149,5 +149,14 @@ namespace Presupuesto.Registros
                 Utils.ShowToastr(this, "No existe", "Error", "error");
         }
 
+        protected void descripcionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void fechaTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

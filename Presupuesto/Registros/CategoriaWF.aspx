@@ -33,7 +33,7 @@
                             <div class="container">
                                 <div class="form-group">
                                     <asp:Label ID="Label4" runat="server" Text="Descripcion"></asp:Label>
-                                    <asp:TextBox class="form-control" ID="descripcionTextBox" placeholder="Nombre" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="descripcionTextBox" placeholder="Nombre" runat="server" OnTextChanged="descripcionTextBox_TextChanged"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -62,5 +62,7 @@
             </div>
             <!-- card.// -->
             <br>
+    </div>
+</div>
     </div>
 </asp:Content>

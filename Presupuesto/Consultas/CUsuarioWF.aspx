@@ -9,10 +9,9 @@
             <asp:Label Text="Filtro" class="text-success" runat="server" />
             <asp:DropDownList ID="FiltroDropDownList" CssClass="form-control" runat="server">
                 <asp:ListItem>Todo</asp:ListItem>
-                <asp:ListItem>Fecha</asp:ListItem>
+                <asp:ListItem>Todo por Fecha</asp:ListItem>
                 <asp:ListItem>UsuarioId</asp:ListItem>
                 <asp:ListItem>Nombre</asp:ListItem>
-                <asp:ListItem>Email</asp:ListItem>
             </asp:DropDownList>
         </div>
         <%--Criterio--%>
@@ -21,7 +20,7 @@
             <asp:TextBox ID="CriterioTextBox" AutoCompleteType="Disabled" class="form-control input-group" runat="server"></asp:TextBox>
         </div>
         <div class="col-lg-1 p-0">
-            <asp:LinkButton ID="buscarLinkButton" CssClass="btn btn-outline-success mt-4" runat="server">
+            <asp:LinkButton ID="buscarLinkButton" CssClass="btn btn-outline-success mt-4" runat="server" OnClick="buscarLinkButton_Click">
                 <span class="fas fa-search"></span>
                  Buscar
             </asp:LinkButton>
@@ -40,10 +39,10 @@
         </div>
     </div>
     <div class="form-row justify-content-center">
-        <asp:GridView ID="egresoGridView" runat="server" class="table table-condensed table-bordered table-responsive" AutoGenerateColumns="False" CellPadding="4" ForeColor="#0066FF" GridLines="None">
+        <asp:GridView ID="usuarioGridView" runat="server" class="table table-condensed table-bordered table-responsive" AutoGenerateColumns="False" CellPadding="4" ForeColor="#0066FF" GridLines="None">
             <AlternatingRowStyle BackColor="#999999" />
             <Columns>
-                <asp:BoundField DataField="EgresoId" HeaderText="EgresoId" />
+                <asp:BoundField DataField="UsuarioId" HeaderText="UsuarioId" />
                 <asp:BoundField DataField="Fecha" HeaderText="Fecha" />
                 <asp:BoundField DataField="Nombres" HeaderText="Nombres" />
                 <asp:BoundField DataField="Email" HeaderText="Email" />
@@ -53,5 +52,15 @@
             </Columns>
             <HeaderStyle BackColor="003366" Font-Bold="True" />
         </asp:GridView>
+    </div>
+     <div class="card-footer">
+        <div class="justify-content-start">
+            <div class="form-group" style="display: inline-block">
+                <asp:LinkButton ID="ImprimirLinkButton" CssClass="btn btn-info mt-4" runat="server">
+                            <span class="fas fa-print"></span>
+                            Imprimir
+                </asp:LinkButton>
+            </div>
+        </div>
     </div>
 </asp:Content>
